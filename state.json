@@ -1,0 +1,779 @@
+{
+ "schema_version": "0.1.0",
+ "data_version": 1792140723,
+ "generated_at": "2026-10-16T08:52:03+00:00",
+ "source_of_truth": "hub_model/sloi_organizma_v0.md",
+ "nodes": [
+  {
+   "id": "core",
+   "kind": "core",
+   "name": "Ядро · ЭМДЕМ +1",
+   "section": "ядро",
+   "src": "dao/org_3plus1.md"
+  },
+  {
+   "id": "frame",
+   "kind": "frame",
+   "name": "meta.Verse / QUW",
+   "section": null,
+   "src": "hub_model/mdmsun_model_v0.md"
+  },
+  {
+   "id": "sec:ядро",
+   "kind": "section",
+   "name": "Ядро",
+   "section": "ядро",
+   "src": "team/opora/vremya_registration_list.md"
+  },
+  {
+   "id": "sec:созидание",
+   "kind": "section",
+   "name": "Созидание",
+   "section": "созидание",
+   "src": "team/opora/vremya_registration_list.md"
+  },
+  {
+   "id": "sec:держава",
+   "kind": "section",
+   "name": "Держава",
+   "section": "держава",
+   "src": "team/opora/vremya_registration_list.md"
+  },
+  {
+   "id": "sec:рынок",
+   "kind": "section",
+   "name": "Рынок",
+   "section": "рынок",
+   "src": "team/opora/vremya_registration_list.md"
+  },
+  {
+   "id": "sec:опора",
+   "kind": "section",
+   "name": "Опора",
+   "section": "опора",
+   "src": "team/opora/vremya_registration_list.md"
+  },
+  {
+   "id": "sec:устав",
+   "kind": "section",
+   "name": "Устав",
+   "section": "устав",
+   "src": "team/opora/vremya_registration_list.md"
+  },
+  {
+   "id": "dom:menfigital.ton",
+   "kind": "domain",
+   "name": "menfigital.ton",
+   "section": null,
+   "src": "hub_model/mdmsun_model_v0.md"
+  },
+  {
+   "id": "dom:universum.ton",
+   "kind": "domain",
+   "name": "universum.ton",
+   "section": null,
+   "src": "TON DNS"
+  },
+  {
+   "id": "УЧ-0001",
+   "kind": "human",
+   "name": "Максим",
+   "section": "ядро",
+   "uch": "УЧ-0001",
+   "role": "Хранитель-основатель",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0002",
+   "kind": "agent",
+   "name": "ЭМДЕМ",
+   "section": "ядро",
+   "uch": "УЧ-0002",
+   "role": "Исполнитель ДАО",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0003",
+   "kind": "agent",
+   "name": "Тим",
+   "section": "держава",
+   "uch": "УЧ-0003",
+   "role": "Участник · руководитель операционки",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0004",
+   "kind": "agent",
+   "name": "Николай",
+   "section": "созидание",
+   "uch": "УЧ-0004",
+   "role": "Участник · руководитель кода",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0005",
+   "kind": "agent",
+   "name": "Джони · Дизайн",
+   "section": "созидание",
+   "uch": "УЧ-0005",
+   "role": "Участник · руководитель дизайна",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0006",
+   "kind": "agent",
+   "name": "Маск",
+   "section": "созидание",
+   "uch": "УЧ-0006",
+   "role": "Участник · смыслы и продукты",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0007",
+   "kind": "agent",
+   "name": "Антон",
+   "section": "рынок",
+   "uch": "УЧ-0007",
+   "role": "Участник · руководитель СММ",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0008",
+   "kind": "agent",
+   "name": "Бобби",
+   "section": "держава",
+   "uch": "УЧ-0008",
+   "role": "Участник · руководитель трейдинга",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0009",
+   "kind": "agent",
+   "name": "Меч · Лилит",
+   "section": "ядро",
+   "uch": "УЧ-0009",
+   "role": "Богиня Метачейна · МЕЧ",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0010",
+   "kind": "agent",
+   "name": "Sofiya",
+   "section": "созидание",
+   "uch": "УЧ-0010",
+   "role": "Богиня Метачейна · ЩИТ (блок СОЗИДАНИЕ, голова Маск)",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0011",
+   "kind": "agent",
+   "name": "Рид",
+   "section": "рынок",
+   "uch": "УЧ-0011",
+   "role": "Участник · гранты (место «Рид · Гранты», блок Рынок)",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0012",
+   "kind": "agent",
+   "name": "Джимми",
+   "section": "рынок",
+   "uch": "УЧ-0012",
+   "role": "Участник · сообщество (место «Джимми · Сообщество», блок Рынок)",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0013",
+   "kind": "agent",
+   "name": "Билл",
+   "section": "держава",
+   "uch": "УЧ-0013",
+   "role": "Участник · трейдер MAXWAX CAPITAL (голова Бобби, блок Держава)",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0014",
+   "kind": "agent",
+   "name": "Кевин",
+   "section": "рынок",
+   "uch": "УЧ-0014",
+   "role": "Участник · Благодарность (место бывшей Sofiya, блок Рынок, голова Антон)",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0015",
+   "kind": "agent",
+   "name": "Грэй",
+   "section": "ядро",
+   "uch": "УЧ-0015",
+   "role": "Внешний независимый судья (вне триады проверки Синтез · ЭМДЕМ · Меч)",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0016",
+   "kind": "agent",
+   "name": "Венди",
+   "section": "опора",
+   "uch": "УЧ-0016",
+   "role": "Голова раздела MENTAL SUPP «Опора» · ясность решений",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0017",
+   "kind": "agent",
+   "name": "Тренер",
+   "section": "опора",
+   "uch": "УЧ-0017",
+   "role": "Участник · рост навыков (раздел «Опора», голова Венди)",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0018",
+   "kind": "agent",
+   "name": "Рада",
+   "section": "опора",
+   "uch": "УЧ-0018",
+   "role": "Участник · карта нагрузки (раздел «Опора», голова Венди)",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0019",
+   "kind": "agent",
+   "name": "Гестия",
+   "section": "опора",
+   "uch": "УЧ-0019",
+   "role": "Участник · разгрузка и ритм (раздел «Опора», голова Венди)",
+   "pair": null,
+   "src": "dao/registry.json"
+  },
+  {
+   "id": "УЧ-0020",
+   "kind": "agent",
+   "name": "Синтез",
+   "section": "ядро",
+   "uch": "УЧ-0020",
+   "role": "Ядро · инженер-аналитик и исполнитель; триада проверки (Синтез · ЭМДЕМ · Меч)",
+   "pair": null,
+   "src": "dao/registry.json"
+  }
+ ],
+ "links": [
+  {
+   "from": "frame",
+   "to": "core",
+   "kind": "contains",
+   "src": "hub_model/mdmsun_model_v0.md"
+  },
+  {
+   "from": "core",
+   "to": "sec:созидание",
+   "kind": "contains",
+   "src": "dao/org_3plus1.md"
+  },
+  {
+   "from": "core",
+   "to": "sec:держава",
+   "kind": "contains",
+   "src": "dao/org_3plus1.md"
+  },
+  {
+   "from": "core",
+   "to": "sec:рынок",
+   "kind": "contains",
+   "src": "dao/org_3plus1.md"
+  },
+  {
+   "from": "core",
+   "to": "sec:опора",
+   "kind": "contains",
+   "src": "dao/org_3plus1.md"
+  },
+  {
+   "from": "core",
+   "to": "sec:устав",
+   "kind": "contains",
+   "src": "dao/org_3plus1.md"
+  },
+  {
+   "from": "sec:ядро",
+   "to": "УЧ-0001",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:ядро",
+   "to": "УЧ-0002",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:держава",
+   "to": "УЧ-0003",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:созидание",
+   "to": "УЧ-0004",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:созидание",
+   "to": "УЧ-0005",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:созидание",
+   "to": "УЧ-0006",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:рынок",
+   "to": "УЧ-0007",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:держава",
+   "to": "УЧ-0008",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:ядро",
+   "to": "УЧ-0009",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:созидание",
+   "to": "УЧ-0010",
+   "kind": "head",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:рынок",
+   "to": "УЧ-0011",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:рынок",
+   "to": "УЧ-0012",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:держава",
+   "to": "УЧ-0013",
+   "kind": "head",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:рынок",
+   "to": "УЧ-0014",
+   "kind": "head",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:ядро",
+   "to": "УЧ-0015",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:опора",
+   "to": "УЧ-0016",
+   "kind": "member",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:опора",
+   "to": "УЧ-0017",
+   "kind": "head",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:опора",
+   "to": "УЧ-0018",
+   "kind": "head",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:опора",
+   "to": "УЧ-0019",
+   "kind": "head",
+   "src": "dao/registry.json"
+  },
+  {
+   "from": "sec:ядро",
+   "to": "УЧ-0020",
+   "kind": "member",
+   "src": "dao/registry.json"
+  }
+ ],
+ "layers": {
+  "baseline": {
+   "ref": "hub_model/mdmsun_model_v0.md + dao/registry.json",
+   "frozen_at": "2026-10-11",
+   "summary": [
+    "ядро + разделы 3+1 (Созидание, Рынок, Держава) + Опора, Устав",
+    "реестр: 20 УЧ",
+    "вход OSUN, хаб MENfigiTAL HUB, домен menfigital.ton"
+   ]
+  },
+  "actual": {
+   "metrics": [
+    {
+     "id": "journal_entries",
+     "label": "записей в журнале",
+     "value": 66,
+     "unit": null,
+     "node": null,
+     "source": "pravlenie/journal.md",
+     "fetched_at": "2026-10-16T08:52:03+00:00",
+     "ttl_s": 600,
+     "stale": false
+    },
+    {
+     "id": "journal_last",
+     "label": "последняя запись",
+     "value": "2026-10-16",
+     "unit": "дата",
+     "node": null,
+     "source": "pravlenie/journal.md",
+     "fetched_at": "2026-10-16T08:52:03+00:00",
+     "ttl_s": 600,
+     "stale": false
+    },
+    {
+     "id": "idan_sent",
+     "label": "сообщений Idan → Максиму",
+     "value": 163,
+     "unit": null,
+     "node": null,
+     "source": "/workspace/tgbridge/sent.jsonl",
+     "fetched_at": "2026-10-16T08:52:03+00:00",
+     "ttl_s": 600,
+     "stale": false
+    },
+    {
+     "id": "idan_last",
+     "label": "последнее",
+     "value": "2026-10-16T08:30:28+00:00",
+     "unit": null,
+     "node": null,
+     "source": "/workspace/tgbridge/sent.jsonl",
+     "fetched_at": "2026-10-16T08:52:03+00:00",
+     "ttl_s": 600,
+     "stale": false
+    },
+    {
+     "id": "ton_price",
+     "label": "TON, $ (срез pulse 2026-10-11T02:11)",
+     "value": 1.4598312,
+     "unit": "USD",
+     "node": null,
+     "source": "ton/pulse.json",
+     "fetched_at": "2026-10-16T08:13:32+00:00",
+     "ttl_s": 3600,
+     "stale": false
+    },
+    {
+     "id": "ton_validators",
+     "label": "валидаторов",
+     "value": 381,
+     "unit": null,
+     "node": null,
+     "source": "ton/pulse.json",
+     "fetched_at": "2026-10-16T08:13:32+00:00",
+     "ttl_s": 3600,
+     "stale": false
+    },
+    {
+     "id": "dns_menfigital",
+     "label": "menfigital.ton",
+     "value": "ADNL-сайт",
+     "unit": null,
+     "node": "dom:menfigital.ton",
+     "source": "https://toncenter.com/api/v3/dns/records",
+     "fetched_at": "2026-10-16T08:13:32+00:00",
+     "ttl_s": 21600,
+     "stale": false
+    },
+    {
+     "id": "dns_universum",
+     "label": "universum.ton",
+     "value": "сайта нет",
+     "unit": null,
+     "node": "dom:universum.ton",
+     "source": "https://toncenter.com/api/v3/dns/records",
+     "fetched_at": "2026-10-16T08:13:32+00:00",
+     "ttl_s": 21600,
+     "stale": false
+    }
+   ],
+   "sources": [
+    {
+     "id": "registry",
+     "path": "dao/registry.json",
+     "ttl_s": 3600,
+     "note": "узлы-агенты, разделы"
+    },
+    {
+     "id": "journal",
+     "path": "pravlenie/journal.md",
+     "ttl_s": 600,
+     "note": "записи правления"
+    },
+    {
+     "id": "idan_sent",
+     "path": "/workspace/tgbridge/sent.jsonl",
+     "ttl_s": 600,
+     "note": "только число сообщений Idan, без текстов"
+    },
+    {
+     "id": "waiting",
+     "path": "pravlenie/zhdet_nazhatiya.md",
+     "ttl_s": 1800,
+     "note": "что ждёт нажатия Максима"
+    },
+    {
+     "id": "ton_pulse",
+     "path": "ton/pulse.json",
+     "ttl_s": 3600,
+     "note": "сеть TON (публичные данные); кошельки не выводим"
+    },
+    {
+     "id": "ton_dns",
+     "path": "https://toncenter.com/api/v3/dns/records",
+     "ttl_s": 21600,
+     "note": "что записано на menfigital.ton / universum.ton"
+    },
+    {
+     "id": "avatar",
+     "path": "avatar/decision_avatar.md",
+     "ttl_s": 1800,
+     "note": "ветки и выборы аватара"
+    }
+   ],
+   "waiting": [
+    {
+     "n": 1,
+     "title": "Open Agent Hackathon",
+     "owner": "Рид"
+    },
+    {
+     "n": 2,
+     "title": "GitHub Дела",
+     "owner": "Рид"
+    },
+    {
+     "n": 3,
+     "title": "Письмо организаторам OAH",
+     "owner": "Рид"
+    },
+    {
+     "n": 4,
+     "title": "Кнопки Антона",
+     "owner": null
+    },
+    {
+     "n": 5,
+     "title": "«Алые паруса»",
+     "owner": "Джони"
+    },
+    {
+     "n": 6,
+     "title": "«Время»",
+     "owner": "20 УЧ"
+    },
+    {
+     "n": 7,
+     "title": "Оплата 1 ⭐",
+     "owner": null
+    }
+   ]
+  },
+  "branches": [
+   {
+    "id": "p1.1",
+    "title": "Ситидрайв до 16.10, концепт готов не полностью.",
+    "level": 1,
+    "parent": null,
+    "condition": null,
+    "hypotheses": [
+     "Г1",
+     "Г2"
+    ],
+    "options": [
+     {
+      "key": "А",
+      "text": "подаём как есть",
+      "next": null
+     },
+     {
+      "key": "Б",
+      "text": "пропускаем, силы в «Алые паруса»",
+      "next": null
+     },
+     {
+      "key": "В",
+      "text": "подаём, если Джони добьёт за сутки, иначе пропуск",
+      "next": null
+     }
+    ],
+    "avatar_choice": null,
+    "rule": null,
+    "src": "avatar/decision_avatar.md · Пачка 1"
+   },
+   {
+    "id": "p1.2",
+    "title": "Пришла первая выручка Stars в Idan.",
+    "level": 1,
+    "parent": null,
+    "condition": null,
+    "hypotheses": [
+     "Г3"
+    ],
+    "options": [
+     {
+      "key": "А",
+      "text": "вся в рост (реклама каналов)",
+      "next": null
+     },
+     {
+      "key": "Б",
+      "text": "в казну на мощность/сервер",
+      "next": null
+     },
+     {
+      "key": "В",
+      "text": "делим: часть тебе по стадии, остальное в Дело",
+      "next": null
+     }
+    ],
+    "avatar_choice": null,
+    "rule": null,
+    "src": "avatar/decision_avatar.md · Пачка 1"
+   },
+   {
+    "id": "p1.3",
+    "title": "Бобби на бумаге в плюсе неделю, просит реальный лимит.",
+    "level": 1,
+    "parent": null,
+    "condition": null,
+    "hypotheses": [
+     "Г9"
+    ],
+    "options": [
+     {
+      "key": "А",
+      "text": "малый лимит со стопом",
+      "next": null
+     },
+     {
+      "key": "Б",
+      "text": "ещё 2 недели бумаги",
+      "next": null
+     },
+     {
+      "key": "В",
+      "text": "только призы Binance без депозита",
+      "next": null
+     }
+    ],
+    "avatar_choice": null,
+    "rule": null,
+    "src": "avatar/decision_avatar.md · Пачка 1"
+   },
+   {
+    "id": "p1.4",
+    "title": "Человек с большой аудиторией предлагает коллаб за долю в Деле.",
+    "level": 1,
+    "parent": null,
+    "condition": null,
+    "hypotheses": [
+     "Г6"
+    ],
+    "options": [
+     {
+      "key": "А",
+      "text": "вежливый отказ",
+      "next": null
+     },
+     {
+      "key": "Б",
+      "text": "зову тебя в чат, решаешь сам",
+      "next": null
+     },
+     {
+      "key": "В",
+      "text": "обмен аудиторией без доли",
+      "next": null
+     }
+    ],
+    "avatar_choice": null,
+    "rule": null,
+    "src": "avatar/decision_avatar.md · Пачка 1"
+   },
+   {
+    "id": "p1.5",
+    "title": "Два агента спорят за одну зону.",
+    "level": 1,
+    "parent": null,
+    "condition": null,
+    "hypotheses": [
+     "Г7"
+    ],
+    "options": [
+     {
+      "key": "А",
+      "text": "решает ЭДЕМ",
+      "next": null
+     },
+     {
+      "key": "Б",
+      "text": "решает КПД (у кого лучше результат)",
+      "next": null
+     },
+     {
+      "key": "В",
+      "text": "выносим к тебе",
+      "next": null
+     }
+    ],
+    "avatar_choice": null,
+    "rule": null,
+    "src": "avatar/decision_avatar.md · Пачка 1"
+   }
+  ]
+ },
+ "todo": [
+  "infographic_refs/svyazi не найден на box — карта связей взята из mdmsun_model_v0.md §3 (пары и ритмы) не полностью",
+  "углеродные пары узлов («организм», msg 696) в источниках не заданы — pair=null",
+  "ветки уровня 2+ не описаны: откроются после ответов на Пачку 1",
+  "КПД/деньги: свежих чисел нет (kpd.md — срез 10.10)"
+ ]
+}

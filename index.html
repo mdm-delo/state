@@ -1,0 +1,47 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Организм · состояние → сценарии</title>
+<style>
+:root{--bg:#050510;--fg:#e6e6f0;--dim:#7a7a99;--line:#24243a;--a:#3fe0ff;--g:#ffc94a;--m:#ff4fd8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 ui-monospace,"JetBrains Mono",Menlo,monospace}
+header{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+h1{font-size:16px;margin:0;color:var(--a)}small,.dim{color:var(--dim)}
+.tabs button{background:none;border:1px solid var(--line);color:var(--fg);padding:4px 10px;margin-right:6px;cursor:pointer;font:inherit}
+.tabs button.on{border-color:var(--a);color:var(--a)}
+main{padding:16px 18px}ul.tree,ul.tree ul{list-style:none;margin:0;padding-left:18px;border-left:1px dashed var(--line)}
+ul.tree{padding-left:0;border:0}li{margin:4px 0}
+.n{display:inline-block;padding:3px 8px;border:1px solid var(--line);cursor:pointer;user-select:none}
+.n:hover{border-color:var(--a)}.n.k-actual{border-color:var(--a)}.n.k-branch{border-color:var(--m)}.n.k-opt.on{border-color:var(--g);color:var(--g)}
+.c::before{content:"▸ ";color:var(--dim)}.open>.c::before{content:"▾ "}li:not(.open)>ul{display:none}
+.stale{color:var(--m)}.tag{color:var(--dim);font-size:12px;margin-left:6px}
+#info{margin-top:14px;padding:10px;border:1px solid var(--line);min-height:40px;white-space:pre-wrap}
+</style></head><body>
+<header><h1>Живой Организм · состояние → сценарии</h1><span class="tabs"><button data-v="tree" class="on">дерево</button><button data-v="base">начальное</button><button data-v="org">узлы</button></span>
+<small id="ver"></small></header>
+<main><div id="view"></div><div id="info" class="dim">клик по узлу — подробности; по варианту — пометить «мой выбор» (локально, никуда не отправляется)</div></main>
+<script>
+const $=s=>document.querySelector(s); let S=null, view="tree";
+const picks=JSON.parse(localStorage.getItem("picks")||"{}");
+const el=(t,a={},...k)=>{const e=document.createElement(t);for(const[x,y]of Object.entries(a))x=="on"?e.onclick=y:e.setAttribute(x,y);k.flat().forEach(c=>e.append(c));return e};
+function node(label,cls,info,kids){const li=el("li",{class:kids&&kids.length?"":"leaf"});const s=el("span",{class:"n "+cls+(kids&&kids.length?" c":"")},label);
+ s.onclick=e=>{e.stopPropagation();if(kids&&kids.length)li.classList.toggle("open");if(info)$("#info").textContent=info};li.append(s);
+ if(kids&&kids.length)li.append(el("ul",{},kids));return li}
+function tree(){const A=S.layers.actual;
+ const met=A.metrics.map(m=>node(`${m.label}: ${m.value??"—"}`,m.stale?"stale":"",`источник: ${m.source}\nобновлено: ${m.fetched_at}\nTTL: ${m.ttl_s} с${m.stale?"\nУСТАРЕЛО":""}`));
+ const wait=A.waiting.map(w=>node(`${w.n}. ${w.title}`,"",`ждёт нажатия Максима${w.owner?"\nведёт: "+w.owner:""}\nисточник: pravlenie/zhdet_nazhatiya.md`));
+ const br=S.layers.branches.map(b=>{const opts=b.options.map(o=>{const on=picks[b.id]==o.key;
+   const li=node(`${o.key}) ${o.text}`,"k-opt"+(on?" on":""),null,[node(o.next?o.next:"уровень "+(b.level+1)+": TODO — откроется после ответа","dim","следующий уровень в источниках не описан")]);
+   li.firstChild.addEventListener("click",()=>{picks[b.id]=picks[b.id]==o.key?null:o.key;localStorage.setItem("picks",JSON.stringify(picks));render(true)});return li});
+  return node(`ур.${b.level} · ${b.title}`+(b.avatar_choice?` ✓${b.avatar_choice}`:""),"k-branch",`гипотезы аватара: ${b.hypotheses.join(", ")||"—"}\nвыбор Максима: ${b.avatar_choice||"ждём"}\nисточник: ${b.src}`,opts)});
+ const root=node("СЕЙЧАС · фактическое","k-actual","слой actual: живые метрики с TTL",[node("метрики","",null,met),node(`ждёт нажатия · ${wait.length}`,"",null,wait),node(`ветки сценариев · ${br.length}`,"k-branch","слой branches: уровни как у персонажа; выбор обучает аватар решений",br)]);
+ return el("ul",{class:"tree"},root)}
+function base(){const B=S.layers.baseline;return el("ul",{class:"tree"},node("НАЧАЛЬНОЕ · "+B.frozen_at,"",B.ref,B.summary.map(x=>node(x,"")).concat([node("TODO","stale",null,S.todo.map(t=>node(t,"dim")))])))}
+function org(){const by={};S.nodes.filter(n=>n.kind=="agent"||n.kind=="human").forEach(n=>(by[n.section||"?"]=by[n.section||"?"]||[]).push(n));
+ return el("ul",{class:"tree"},node("Ядро и разделы","",null,Object.entries(by).map(([k,v])=>node(`${k} · ${v.length}`,"",null,v.map(n=>node(`${n.uch} ${n.name}`,"",`${n.role||""}\nисточник: ${n.src}`))))))}
+function render(keep){const open=keep?[...document.querySelectorAll("li.open>span")].map(s=>s.textContent):null;
+ $("#view").replaceChildren(view=="tree"?tree():view=="base"?base():org());
+ document.querySelectorAll("#view li>span").forEach(s=>{if(!open||open.includes(s.textContent))if(!open&&s.closest("li").parentElement.classList.contains("tree"))s.parentElement.classList.add("open");else if(open&&open.includes(s.textContent))s.parentElement.classList.add("open")});
+ $("#ver").textContent=`схема ${S.schema_version} · данные ${S.generated_at.replace("T"," ").slice(0,16)} UTC`}
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");view=b.dataset.v;render()});
+async function load(){try{const r=await fetch("state.json?"+Date.now(),{cache:"no-store"});S=await r.json();render(!!document.querySelector("li"))}catch(e){$("#info").textContent="state.json не загрузился: "+e}}
+load();setInterval(load,10*60*1000);  // онлайн с задержкой: раз в 10 мин, экономия энергии
+</script></body></html>

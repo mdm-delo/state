@@ -1,7 +1,7 @@
 {
  "schema_version": "0.1.0",
- "data_version": 1792140723,
- "generated_at": "2026-10-16T08:52:03+00:00",
+ "data_version": 1792140785,
+ "generated_at": "2026-10-16T08:53:05+00:00",
  "source_of_truth": "hub_model/sloi_organizma_v0.md",
  "nodes": [
   {

@@ -1,7 +1,7 @@
 {
  "schema_version": "0.1.0",
- "data_version": 1792140785,
- "generated_at": "2026-10-16T08:53:05+00:00",
+ "data_version": 1792141386,
+ "generated_at": "2026-10-16T09:03:06+00:00",
  "source_of_truth": "hub_model/sloi_organizma_v0.md",
  "nodes": [
   {
@@ -452,7 +452,7 @@
      "unit": null,
      "node": null,
      "source": "pravlenie/journal.md",
-     "fetched_at": "2026-10-16T08:52:03+00:00",
+     "fetched_at": "2026-10-16T09:03:06+00:00",
      "ttl_s": 600,
      "stale": false
     },
@@ -463,29 +463,29 @@
      "unit": "дата",
      "node": null,
      "source": "pravlenie/journal.md",
-     "fetched_at": "2026-10-16T08:52:03+00:00",
+     "fetched_at": "2026-10-16T09:03:06+00:00",
      "ttl_s": 600,
      "stale": false
     },
     {
      "id": "idan_sent",
      "label": "сообщений Idan → Максиму",
-     "value": 163,
+     "value": 164,
      "unit": null,
      "node": null,
      "source": "/workspace/tgbridge/sent.jsonl",
-     "fetched_at": "2026-10-16T08:52:03+00:00",
+     "fetched_at": "2026-10-16T09:03:06+00:00",
      "ttl_s": 600,
      "stale": false
     },
     {
      "id": "idan_last",
      "label": "последнее",
-     "value": "2026-10-16T08:30:28+00:00",
+     "value": "2026-10-16T08:57:33+00:00",
      "unit": null,
      "node": null,
      "source": "/workspace/tgbridge/sent.jsonl",
-     "fetched_at": "2026-10-16T08:52:03+00:00",
+     "fetched_at": "2026-10-16T09:03:06+00:00",
      "ttl_s": 600,
      "stale": false
     },
